@@ -1,0 +1,19 @@
+<%- include('partials/header.ejs') %>
+
+    <main>
+        <h3 class="subtitle">Messages</h3>
+        <div class="container-cards">
+            <% messages.forEach((msg)=> { %>
+                <div class="card">
+                    <h3 class="message_author"><%= msg.user %></h3>
+                    <p class="message_text"><%= msg.text  %></p>
+                    <p class="message_date"><%= msg.added.toLocaleDateString('it-IT')  %></p>
+                </div>
+            <% })%>
+        </div>
+    </main>
+
+
+
+
+    <%- include('partials/footer.ejs') %>

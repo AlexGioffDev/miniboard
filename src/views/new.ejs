@@ -1,0 +1,18 @@
+<%- include('partials/header.ejs') %>
+
+<main>
+    <h3 class="subtitle">New message</h3>
+    <form action="/new" method="POST">
+        <div class="form-input">
+            <label for="messageUser">User:</label>
+            <input type="text" name="messageUser" id="messageUser" required>
+        </div>
+        <div class="form-input">
+            <label for="messageText">Message:</label>
+            <textarea name="messageText" id="messageText" required>write here your message...</textarea>
+        </div>
+        <button type="submit">Create</button>
+    </form>
+</main>
+
+<%- include('partials/footer.ejs') %>
